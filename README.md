@@ -16,11 +16,11 @@ An MPPT solar charge controller is a smart DC-to-DC converter that optimizes the
 * **Control Variable:** PWM Duty Cycle ($D$).
 * **Algorithm:** Perturb and Observe (P&O).
 
-## Firmware Files
+## Project Structure
 
 The firmware is organized in multiple files, each with a specific function: 
 
-|                                                                                           |
+| Firmware Files                                                                            |
 |:---                               |:---                                                   |
 | **mppt_charge_controller.ino**    | Initialization, and loops the code.                   |
 | **1_Read_Sensors.ino**            | Reads measurements from sensors.                      |
