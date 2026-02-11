@@ -325,7 +325,7 @@ pio device monitor --port /dev/ttyUSB0 > telemetry.csv
 
 You can also view this telemetry using the Arduino IDE's **Serial Monitor** (**Tools | Serial Monitor**). Set the baud rate to **500000** like it is configured in the firmware. You should now see acronyms and values scrolling over the screen.
 
-|                                               |
+| Acronym       | Descrioption                  |
 |:---:          |:---                           |
 | Sensor Data:                                  |
 | **ST**        | sensor timestamp              |
