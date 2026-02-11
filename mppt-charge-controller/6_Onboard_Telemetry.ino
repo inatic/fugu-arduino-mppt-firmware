@@ -70,46 +70,46 @@ void onboardTelemetry(const SensorData &sensors, const SensorCalibration &calibr
       Serial.println();
 
       // Sensor Data
-      Serial.print(sensors.timestamp);                              Serial.print(";");
-      Serial.print(sensors.voltageInput, 2);                        Serial.print(";");
-      Serial.print(sensors.voltageOutput, 2);                       Serial.print(";");
-      Serial.print(sensors.currentInput, 2);                        Serial.print(";");
-      Serial.print(sensors.currentOutput, 2);                       Serial.print(";");
-      Serial.print(sensors.powerInput, 2);                          Serial.print(";");
-      Serial.print(sensors.powerOutput, 2);                         Serial.print(";");
-      Serial.print(sensors.temperature, 1);                         Serial.print(";");
-      Serial.print(sensors.currentSensorVoltage, 3);                Serial.print(";");
+      Serial.print(sensors.timestamp);                              Serial.print(",");
+      Serial.print(sensors.voltageInput, 2);                        Serial.print(",");
+      Serial.print(sensors.voltageOutput, 2);                       Serial.print(",");
+      Serial.print(sensors.currentInput, 2);                        Serial.print(",");
+      Serial.print(sensors.currentOutput, 2);                       Serial.print(",");
+      Serial.print(sensors.powerInput, 2);                          Serial.print(",");
+      Serial.print(sensors.powerOutput, 2);                         Serial.print(",");
+      Serial.print(sensors.temperature, 1);                         Serial.print(",");
+      Serial.print(sensors.currentSensorVoltage, 3);                Serial.print(",");
 
       // Sensor Calibration
-      Serial.print(calibration.currentSensorMidpointVoltage, 3);    Serial.print(";");
+      Serial.print(calibration.currentSensorMidpointVoltage, 3);    Serial.print(",");
       
       // System State
-      Serial.print(system.isFatallyLowVoltage);                     Serial.print(";");
-      Serial.print(system.isInputUnderVoltage);                     Serial.print(";");
-      Serial.print(system.isInputOverCurrent);                      Serial.print(";");
-      Serial.print(system.isOutputOverVoltage);                     Serial.print(";");
-      Serial.print(system.isOutputOverCurrent);                     Serial.print(";");
-      Serial.print(system.isInputBelowOutputVoltage);               Serial.print(";");
-      Serial.print(system.isOverTemperature);                       Serial.print(";");
-      Serial.print(system.isBatteryNotConnected);                   Serial.print(";");
-      Serial.print(system.powerSource);                             Serial.print(";");
+      Serial.print(system.isFatallyLowVoltage);                     Serial.print(",");
+      Serial.print(system.isInputUnderVoltage);                     Serial.print(",");
+      Serial.print(system.isInputOverCurrent);                      Serial.print(",");
+      Serial.print(system.isOutputOverVoltage);                     Serial.print(",");
+      Serial.print(system.isOutputOverCurrent);                     Serial.print(",");
+      Serial.print(system.isInputBelowOutputVoltage);               Serial.print(",");
+      Serial.print(system.isOverTemperature);                       Serial.print(",");
+      Serial.print(system.isBatteryNotConnected);                   Serial.print(",");
+      Serial.print(system.powerSource);                             Serial.print(",");
 
       // Control State
-      Serial.print(control.isInputEnabled);                         Serial.print(";");
-      Serial.print(control.isBuckEnabled);                          Serial.print(";");
-      Serial.print(control.isFanEnabled);                           Serial.print(";");
+      Serial.print(control.isInputEnabled);                         Serial.print(",");
+      Serial.print(control.isBuckEnabled);                          Serial.print(",");
+      Serial.print(control.isFanEnabled);                           Serial.print(",");
 
       // PWM State
-      Serial.print(pwm.dutyCycle);                                  Serial.print(";");
-      Serial.print(pwm.idealDutyCycle);                             Serial.print(";");
-      Serial.print(pwm.minDutyCycle);                               Serial.print(";");
-      Serial.print(pwm.maxDutyCycle);                               Serial.print(";");
-      Serial.print(pwm.fullScaleDutyCycle);                         Serial.print(";");
+      Serial.print(pwm.dutyCycle);                                  Serial.print(",");
+      Serial.print(pwm.idealDutyCycle);                             Serial.print(",");
+      Serial.print(pwm.minDutyCycle);                               Serial.print(",");
+      Serial.print(pwm.maxDutyCycle);                               Serial.print(",");
+      Serial.print(pwm.fullScaleDutyCycle);                         Serial.print(",");
 
       // Telemetry Data
-      Serial.print(telemetry.wattHours, 0);                         Serial.print(";");
-      Serial.print(telemetry.loopTimeMs, 0);                        Serial.print(";");
-      Serial.print(telemetry.timeOn);                               Serial.print(";");
+      Serial.print(telemetry.wattHours, 0);                         Serial.print(",");
+      Serial.print(telemetry.loopTimeMs, 0);                        Serial.print(",");
+      Serial.print(telemetry.timeOn);                               Serial.print(",");
     }  
     else if(SERIAL_TELEM_MODE==TELEM_ESSENTIAL){
     }  

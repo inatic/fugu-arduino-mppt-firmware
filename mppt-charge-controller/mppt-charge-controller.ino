@@ -185,7 +185,8 @@ void setup() {
 
   // Print header for CSV output
   if(SERIAL_TELEM_MODE==TELEM_NUMBERS_ONLY){
-      Serial.print(" ST; VI; VO; CI; CO; PI; PO; T; CSV; CSMV; FLV; IUV; IOC; OOV; OOC; IBOV; OT; BNC; PS; IE; BE; FE; DC; IDC; MiDC; MaDC; FDC; WH; LT; TO ");
+      Serial.println("sep=,");
+      Serial.println(" ST, VI, VO, CI, CO, PI, PO, T, CSV, CSMV, FLV, IUV, IOC, OOV, OOC, IBOV, OT, BNC, PS, IE, BE, FE, DC, IDC, MiDC, MaDC, FDC, WH, LT, TO ");
   }
 }
 
